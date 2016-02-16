@@ -7,7 +7,7 @@ downloadComponent() {
   DIR_NAME=$4
 
   echo "Downloading $COMP_NAME from $URL_BASE/$FILE_NAME"
-  curl $URL_BASE/$FILE_NAME -o /tmp/$FILE_NAME
+  wget $URL_BASE/$FILE_NAME -O /tmp/$FILE_NAME
 
   echo "Deploying $COMP_NAME"
   rm -rf /usr/local/tomcat/webapps/$DIR_NAME
